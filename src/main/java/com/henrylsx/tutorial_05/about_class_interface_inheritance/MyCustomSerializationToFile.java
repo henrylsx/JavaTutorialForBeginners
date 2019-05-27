@@ -8,7 +8,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public interface MyCustomSerializationToFile {
 	// Interface is just a contract containing constants and abstract methods
 	final String DEFAULT_WRITE_PATH = System.getProperty("java.io.tmpdir");
-
+	//when serializing something, you have option to serialize as byte array, as xml, as json, as protobuf etc
+	//for bytearray, you can't see the content (it's binary)
+	//for xml, you need to open and close xml tag in a balanced format and also xml is very restrictive in terms of unicode characters
+	//for json and protobuf they are quite generally good for any usage
+	
 	public abstract void serialize(String outputPath);
 
 	// default method (new feature from Java 8)

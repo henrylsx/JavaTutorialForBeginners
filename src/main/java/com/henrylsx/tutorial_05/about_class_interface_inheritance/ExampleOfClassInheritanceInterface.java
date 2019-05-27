@@ -17,6 +17,7 @@ public class ExampleOfClassInheritanceInterface {
 		shapeList.addAll(Arrays.asList(new Rectangle(2,3), new Circle(10), new Square(2)));
 		for (Shape s: shapeList) {
 			System.out.println(s.calculateAndPrintCircumference());
+			
 		}
 
 		//ColoredCircle extends Circle, but also implements Cloneable and MyCustomSerializationToFile
