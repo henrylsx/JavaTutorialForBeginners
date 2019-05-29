@@ -7,11 +7,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
-
-import com.google.common.io.Files;
 
 public class NioFileWriter {
 	public static void writeToFile(String filepath, List<String> content) {
@@ -19,7 +18,7 @@ public class NioFileWriter {
 		File f = p.toFile();
 		PrintWriter pw = null;
 		try {
-			BufferedWriter bw = Files.newWriter(f, StandardCharsets.UTF_8);
+			BufferedWriter bw = Files.newBufferedWriter(p, StandardCharsets.UTF_8);
 			try {
 				pw = new PrintWriter(bw);
 				for (String line : content) {
@@ -36,6 +35,9 @@ public class NioFileWriter {
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
 		}finally {
 			pw.close();
 		}
@@ -44,7 +46,7 @@ public class NioFileWriter {
 	public static void writeToFileWithTryWithResources(String filepath, List<String> content) {
 		Path p = Paths.get(filepath);
 		File f = p.toFile();
-		try (BufferedWriter bw = Files.newWriter(f, StandardCharsets.UTF_8)){	
+		try (BufferedWriter bw = Files.newBufferedWriter(p, StandardCharsets.UTF_8)){	
 			try (PrintWriter pw = new PrintWriter(bw)){
 				for (String line : content) {
 					pw.println(line);
