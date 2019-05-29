@@ -16,7 +16,7 @@ public class StreamExample {
 //		employees.parallelStream().forEach(System.out::println); //parallel processing, you'll see them printed not in the sequential order
 		
 		employees.stream().filter(e -> {		//multiline lambda expression
-			System.out.println(e);	//println doesn't get printed unless you call collect because lambda is lazy
+			System.out.println(e);	//println doesn't get printed unless you call collect because stream is lazy
 			return e.getEmployeeId()==1;		
 		});
 //		.collect(Collectors.toList());	
