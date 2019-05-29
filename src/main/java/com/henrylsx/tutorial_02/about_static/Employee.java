@@ -43,6 +43,9 @@ public class Employee{	//POJO class (Plain Old Java Object) - aka domain class
 		this.employeeId = employeeId;
 		this.employeeName = employeeName;
 	}
+	public Employee() {
+		// TODO Auto-generated constructor stub
+	}
 	/**
 	 * @return the employeeId
 	 */
