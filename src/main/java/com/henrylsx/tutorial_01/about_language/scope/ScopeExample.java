@@ -1,4 +1,4 @@
-package com.henrylsx.tutorial_01.about_language;
+package com.henrylsx.tutorial_01.about_language.scope;
 
 public class ScopeExample {
 	int defaultScope = -1;

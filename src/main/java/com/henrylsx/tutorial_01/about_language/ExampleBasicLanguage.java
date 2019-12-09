@@ -3,6 +3,7 @@ package com.henrylsx.tutorial_01.about_language;
 import java.time.LocalDate;
 import java.util.Date;
 
+import com.henrylsx.tutorial_01.about_language.scope.ScopeExample;
 import com.henrylsx.tutorial_02.about_static.DepartmentProcessor;
 
 public class ExampleBasicLanguage {
@@ -36,9 +37,8 @@ public class ExampleBasicLanguage {
 		 * */
 		ScopeExample sc = new ScopeExample();
 		int tmp = sc.pub;	//can access public variable
-		tmp = sc.defaultScope;	// no scope means public
+//		tmp = sc.defaultScope;	// no scope means package scope
 //		tmp = sc.priv;	//cannot access private variable
-		tmp = sc.prot;	//can access protected variable because in same package
 		DepartmentProcessor dp = new DepartmentProcessor();
 //		tmp = dp.prot; 	//cannot access protected variable in other package
 		
