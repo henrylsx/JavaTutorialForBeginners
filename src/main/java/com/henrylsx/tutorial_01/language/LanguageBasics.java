@@ -8,7 +8,6 @@ import com.henrylsx.tutorial_01.language.scope.ScopeExample;
 
 public class LanguageBasics {
 	
-	
 	@SuppressWarnings("unused")	//just informing the IDE to supress warnings of unused variables
 	public static void main(String[]args ) {
 		/* PRIMITIVE VARIABLE TYPES, declare name with camel case starting with small letter, e.g. totalEmployeeCount

@@ -16,6 +16,8 @@ public class Java8Changes {
 		//default methods allows lambda, e.g. within Iterable and Collections interface
 		useOfOptional();
 		useOfDateTimeApi();
+		//Change to Java Memory Management
+		//Previously Heap is YoungGen+OldGen+PermGen now PermGen replaced with Metaspace
 		
 	}
 

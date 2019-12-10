@@ -22,6 +22,10 @@ public class Java7Changes {
 		int numberWithUnderscore = 10_000_000;
 		System.out.println(numberWithUnderscore);
 		runWatchService();
+		//Also, Garbage Collection, Serial/Parallel/CMS now added with G1
+		//G1 (Garbage First) is similar to CMS, it doesn't stop application for GC, 
+		//but it scan the heap and identify the place with most garbage first and start cleaning
+		//from there thereby getting more heap space before cleaning other region
 	}
 
 	public static void tryWithResources() {
