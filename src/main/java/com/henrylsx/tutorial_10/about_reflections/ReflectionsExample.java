@@ -7,8 +7,7 @@ import java.lang.reflect.Method;
 
 public class ReflectionsExample {
 	// in reflections, we deal a lot with dynamic class loading instead of static
-	// class loading
-	// i.e. using class.forName
+	// class loading i.e. using class.forName to load classes during runtime
 	public static void main(String[] args) {
 		try {
 			Class<?> clazz = Class.forName("com.henrylsx.tutorial_05.class_interface_inheritance.ColoredCircle");
@@ -24,8 +23,8 @@ public class ReflectionsExample {
 			}
 			for(Method m : clazz.getDeclaredMethods()) {
 				if(m.getName().contains("setColor")) {
-					m.invoke(obj, Color.BLACK);
-					System.out.println("Object after invoking method:" + m + " becomes: "+ obj);
+					Object returnValue = m.invoke(obj, Color.BLACK);
+					System.out.println("Object after invoking method:" + m + " becomes: "+ obj + " and returnValue is " + returnValue);
 				}
 			}
 

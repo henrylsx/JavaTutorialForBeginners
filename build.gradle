@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'maven'
 
-group = 'com.github.jitpack'
+group = 'com.henrylsx.tutorial'
 
 sourceCompatibility = 1.8 // java 8
 targetCompatibility = 1.8
@@ -11,9 +11,9 @@ repositories {
 }
 
 dependencies {
-  compile 'com.google.guava:guava:18.0'
-  compile 'com.fasterxml.jackson.core:jackson-databind:2.0.1'
- 
+  compile group: 'com.google.guava', name: 'guava', version: '23.0'
+  compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.10.0'
+  compile group: 'org.mockito', name: 'mockito-core', version: '2.23.4'
 }
 
 task sourcesJar(type: Jar, dependsOn: classes) {
