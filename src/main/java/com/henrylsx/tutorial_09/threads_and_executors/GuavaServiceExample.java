@@ -21,7 +21,7 @@ public class GuavaServiceExample {
 		service2.startAsync();
 		
 		
-		for(int i=0;i<10;i++) {
+		for(int i=0;i<20;i++) {
 			System.out.println("Polling run " + i);
 			System.out.println(manager.servicesByState());
 			Thread.sleep(1000);
